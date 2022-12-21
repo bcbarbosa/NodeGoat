@@ -21,7 +21,7 @@ jobs:
         with:
           serverUrl: https://iq.bbarbosa.eu.ngrok.io/
           username: admin
-          password: ${{ secrets.01021994 }}
+          password: password
           applicationId: NodeGoat__bcbarbosa
           stage: Build
           target: .

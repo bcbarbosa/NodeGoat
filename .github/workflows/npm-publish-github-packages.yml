@@ -19,8 +19,8 @@ jobs:
       - name: Nexus IQ Policy Evaluation
         uses: sonatype-nexus-community/iq-github-action@1.1.1
         with:
-          serverUrl: https://iq.bbarbosa.eu.ngrok.io/
-          username: admin
+          serverUrl: ${{ secrets.iqurl }}
+          username: ${{ secrets.iquser }}
           password: ${{ secrets.password }}
           applicationId: NodeGoat__bcbarbosa
           stage: Build

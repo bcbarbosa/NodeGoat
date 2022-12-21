@@ -18,14 +18,14 @@ jobs:
       - run: npm ci
       - run: npm test
       - name: Nexus IQ Policy Evaluation
-      uses: sonatype-nexus-community/iq-github-action@1.1.1
-      with:
-        serverUrl: https://iq.bbarbosa.eu.ngrok.io/
-        username: admin
-        password: ${{ secrets.01021994 }}
-        applicationId: NodeGoat__bcbarbosa
-        stage: Build
-        target: .
+        uses: sonatype-nexus-community/iq-github-action@1.1.1
+        with:
+          serverUrl: https://iq.bbarbosa.eu.ngrok.io/
+          username: admin
+          password: ${{ secrets.01021994 }}
+          applicationId: NodeGoat__bcbarbosa
+          stage: Build
+          target: .
 
   publish-gpr:
     needs: build

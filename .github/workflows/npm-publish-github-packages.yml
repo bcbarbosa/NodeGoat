@@ -21,7 +21,7 @@ jobs:
         with:
           serverUrl: ${{ secrets.iqurl }}
           username: ${{ secrets.iquser }}
-          password: ${{ secrets.password }}
+          password: ${{ secrets.iqpassword }}
           applicationId: NodeGoat__bcbarbosa
           stage: Build
           target: .

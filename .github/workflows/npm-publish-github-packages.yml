@@ -16,6 +16,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
+      - name: Build with NPM
+        run: npm install
   scan:
     runs-on: ubuntu-latest
     steps:

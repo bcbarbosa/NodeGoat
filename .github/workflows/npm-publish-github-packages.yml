@@ -28,7 +28,7 @@ jobs:
       - name: get IQ
         run:  curl -L -f -o /tmp/nexus-iq-cli-latest.jar https://download.sonatype.com/clm/scanner/latest.jar
       - name: Nexus IQ Policy Evaluation
-        run: java -jar /tmp/nexus-iq-cli-latest.jar -i NodeGoat__bcbarbosa -a ${{ secrets.iquser }}:${{ secrets.iqpassword }} -s ${{ secrets.iqurl }} -t build .
+        run: java -jar /tmp/nexus-iq-cli-latest.jar -i NodeGoat__bcbarbosa -a ${{ secrets.iquser }}:${{ secrets.iqpassword }} -s ${{ secrets.iqurl }} -t stage-release .
 #   publish-gpr:
 #     needs: build
 #     runs-on: ubuntu-latest

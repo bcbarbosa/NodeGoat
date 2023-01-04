@@ -20,6 +20,7 @@ jobs:
         run: rm -f package-lock.json
       - name: Build with NPM
         run: npm install
+      - uses: actions/checkout@v1
       - name: Set up JDK 1.8
         uses: actions/setup-java@v1
         with:
@@ -28,7 +29,6 @@ jobs:
         run:  curl -L -f -o /tmp/nexus-iq-cli-latest.jar https://download.sonatype.com/clm/scanner/latest.jar
       - name: Nexus IQ Policy Evaluation
         run: java -jar /tmp/nexus-iq-cli-latest.jar -i NodeGoat__bcbarbosa -a ${{ secrets.iquser }}:${{ secrets.iqpassword }} -s ${{ secrets.iqurl }} -t build .
-
 #   publish-gpr:
 #     needs: build
 #     runs-on: ubuntu-latest
